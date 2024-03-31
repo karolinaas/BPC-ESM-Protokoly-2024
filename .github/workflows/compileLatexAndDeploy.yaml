@@ -32,19 +32,24 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            Document1/doc1.tex
-            Document2/doc2.tex
-            Document3/doc3.tex
+            Uloha1/uloha1.tex
+            Uloha2/uloha2.tex
+            Uloha3/uloha3.tex
+            Uloha4/uloha4.tex
+            Uloha5/uloha5.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           work_in_root_file_dir: true
           continue_on_error: true
       - name: Generate redirect page
+        if: always()
         run: |
           mkdir public
-          mv Document1/doc1.pdf ./public/
-          mv Document2/doc2.pdf ./public/
-          mv Document3/doc3.pdf ./public/
+          mv Uloha1/uloha1.pdf ./public/
+          mv Uloha2/uloha2.pdf ./public/
+          mv Uloha3/uloha3.pdf ./public/
+          mv Uloha4/uloha4.pdf ./public/
+          mv Uloha5/uloha5.pdf ./public/
           cat > ./public/index.html <<EOL
           <!doctype html>
           <html>
@@ -52,9 +57,11 @@ jobs:
               <title>Rozcestník</title>
             </head>
             <body>
-              <p><a href="./doc1.pdf">Document 1</a></p>
-              <p><a href="./doc2.pdf">Document 2</a></p>
-              <p><a href="./doc3.pdf">Document 3</a></p>
+              <p><a href="./uloha1.pdf">Úloha č.1: V-A charakteristiky polovodičových diod</a></p>
+              <p><a href="./uloha2.pdf">Úloha č.2: Dioda jako usměrňovač a řízený odpor</a></p>
+              <p><a href="./uloha3.pdf">Úloha č.3: Bipolární tranzistor - V-A charakteristiky</a></p>
+              <p><a href="./uloha4.pdf">Úloha č.4: Bipolární tranzistor jako zesilovač</a></p>
+              <p><a href="./uloha5.pdf">Úloha č.5: Tranzistor MOSFET - V-A charakteristiky a použití jako spínač</a></p>
             </body>
           </html>
           EOL
