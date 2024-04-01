@@ -55,7 +55,7 @@ V této sekci se nachází dvě tabulky.
 Naměřené i vypočtené hodnoty amplitudové kmitočtové charakteristiky jsme vynesli do jedné společné tabulky.
 Ve druhé tabulce se nachází naměřené hodnoty přenosové charakteristiky.
 
-Dále se zde nachází i časové průběhy vstupního a výstupního napětí pro $U_{vst}$ 10 mV a 100 mV špička-špička uložené z osciloskopu.
+Dále se zde nachází i časové průběhy vstupního a výstupního napětí pro $U_{vst}$ 10 mV špička-špička a 100 mV špička-špička uložené z osciloskopu.
 
 Slovní popis symbolů veličin:
 $f$ - frekvence;
@@ -125,7 +125,7 @@ $A_{UdB}$ - zesílení zesilovače v dB
     \caption{Naměřené hodnoty přenosové charakteristiky}
 \end{table}
 
-Na následujícím naměřeném průběhu je patrné, že při nízkém vstupním napětí $U_{vst}$ je patrné, že nedochází ke zkreslení výstupného signálu.
+Na následujícím naměřeném průběhu je patrné, že při nízkém vstupním napětí $U_{vst}$ že dochází k velkému zesílení a zároveň nedochází k velkému zkreslení výstupního signálu.
 
 \begin{figure}[H]
     \centering
@@ -155,7 +155,7 @@ $${A_{UdB}}_1 = 20 \cdot \log\left(\frac{U_{vyst}}{U_{vst}}\right) = 20 \cdot \l
 
 Naměřené hodnoty zesílení $A_{UdB}$ byly vyneseny do grafu jako funkce frekcence $f$, která je zobrazena v logaritmickém měřítku. Výsledný graf tedy tvoří amplitudovou kmitočtovou charakteristiku.
 Maximální hondota zesílení je $A_{UdB} = 41,90dB$ a toto maximum nastává na kmitočtovém intervalu $750 Hz$ až $25 kHz$.
-Mezní kmitočet, kde zesílení klesne o $3 dB$ je roven hodnotě $38,9 dB$ oproti maximální mu zesílení byl odečten z grafu a přibližně se rovná hodnotě $1,6 MHz$.
+Mezní kmitočet, kde zesílení klesne o $3 dB$ rovné hodnotě $38,9 dB$ oproti maximálnímu zesílení byl odečten z grafu a přibližně se rovná hodnotě $1,6 MHz$.
 
 \begin{figure}[H]
     \centering
@@ -174,5 +174,23 @@ V posledních čtyřech naměŕených bodech dochází k velkému "ohybu" charak
 \end{figure}
 
 \section{Závěr}
+
+Jako první jsme měřili závislost zesílení zesilovače $A_{UdB}$ na frekvenci $f$, neboli amplitudovou kmitočtou charakteristiku.
+Naměřené hodnoty byly vyneseny do grafu, kde pro frekvenci bylo použito logaritmické měřítko
+V této charakteristice byly použity horizontální přímky pro odečtení maximální hodnoty zesílení $A_{UdB_{MAX}}$ a poklesu maximálního zesílení o 3dB.
+Další vertikální křivka byla použita pro odečtení mezního kmitočtu, kde k tomuto poklesu došlo.
+Zjistili jsme, že k maximálnímu zesílení dochází na intervalu frekvenčních hodnot od 750Hz až po 25kHz.
+Mezní kmitočet, kde dochází k poklesu zesílení o 3dB oproti maximální hodnotě je přibližně roven 1,6MHz.
+
+Dále jsme měřili převodní charakteristiku zesilovače, neboli závislost velikosti výstupního napětí na vstupním napětí při konstantním kmitočtu.
+Naměřené hodnoty byly vyneseny do grafu s lineárními osami.
+Pro zhodnocení, ve které oblasti lze charakteristiku považovat za lineární jsme charakteristiku proloži pomocnou lineání funkcí.
+Pomocí ní je zřejmé, že charakteristika je přibližně lineární v rozsahu hodnot vstupního napětí 11mVpp až 80mVpp.
+Při vyšších hodnotách vstupního napětí už dochází k přiliš velkému "ohybu" charakteristiky, proto tyto hodnoty nemůžeme považovat ani za přibližně lineání.
+
+Během měření jsme pozorovali také změny v časovém průběhu výstupního napětí.
+Tyto změny jsou patrné v obrázcích 2 a 3.
+Je vidět, že při nižších hodnotách vstupního napětí dochází k zesílení bez žádného výrazného zkreslení.
+Při vysokých hodnotách vstupního napětí však už dochází k výrazném uzkreslení výstupního signálu a ten je navíc i patrně "ořezán" ve vrchní části.
 
 \end{document}
