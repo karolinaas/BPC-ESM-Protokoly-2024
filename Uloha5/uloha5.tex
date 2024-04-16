@@ -44,6 +44,8 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
     \caption{Charakteristiky tranzistoru NMOS s indukovaným kanálem}
 \end{figure}
 
+\pagebreak
+
 \section{Seznam přístrojů}
 
 \begin{enumerate}
@@ -70,7 +72,7 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
 
 \begin{figure}[H]
     \centering
-    \includegraphics{zapojeni2.png}
+    \includegraphics[width=0.4\textwidth]{zapojeni2.png}
     \caption{Zapojení tranzistoru NMOS jako spínač}
 \end{figure}
 
@@ -81,6 +83,21 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
 \end{figure}
 
 \section{Naměřené hodnoty}
+
+Tato sekce byla rozdělena do několika podsekcí pro jednotlivé měření.
+V první podsekci se nachází jedna tabulka obsahující naměřené hodnoty pěti výstupních charakteristik.
+Ve druhé podsekci se nachází tabulka s naměřenými hodnotami dvou převodních charakteristik.
+V poslední podsekci se nachází časové průběhy vstupního a výstupního napětí tranzistoru zapojeného jako spínač.
+
+Slovní popis symbolů veličin:
+$U_{GS}$ - hradlové napětí (gate - source);
+$U_{DS}$ - kanálové napětí (drain - source);
+$I_D$ - proud tekoucí kanálem;
+$t_{df}$ - doba zpoždění sestupné hrany;
+$t_{f}$ - délka sestupné hrany;
+$t_{dr}$ - doba zpoždění náběžné hrany;
+$t_{r}$ - délka náběžné hrany
+
 
 \subsection{Výstupní charakteristiky tranzistoru NMOS}
 
@@ -123,7 +140,7 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
            &       & 25   & 148,74 &       &       &      &       &       &       \\
     \bottomrule
     \end{tabular}
-    \caption{sdfasd}
+    \caption{Naměřené hodnoty výstupních charakteristik tranzistoru BS170 při několika hodnotách $U_{GS}$}
 \end{table}
 
 \subsection{Převodní charakteristiky tranzistoru NMOS}
@@ -148,33 +165,40 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
         2,8 & 20,12 & 18,49 \\
         \bottomrule
     \end{tabular}
-    \caption{aldeskgfajkd}
+    \caption{Naměřené hodnoty převodních charakteristik tranzistoru BS170 při dvou hodnotách $U_{DS}$}
 \end{table}
+
+\pagebreak
 
 \subsection{Časové posuny při zapojení tranzistoru NMOS jako spínač}
 
+Na následujících čtyřech průbězích jsou zobrazeny časové průběhy z osciloskopu, kde jsou vyznačeny jednotlivé časové posuny.
+Body, mezi kterými bylo měření provedeno jsou znázorněny červenými šipkami.
+Konkrétní naměřená časová hodnota je zvýrazněna červeným rámečkem.
+Všechny naměřené časové hodnoty jsou na konci podsekce uvedeny ve společné tabulce. 
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{t_df.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \includegraphics[width=0.7\textwidth]{t_df.png}
+    \caption{Vstupní a výstupní průběhy napětí z osciloskopu - vyznačen časový posun $t_{df}$}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{t_f.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \includegraphics[width=0.7\textwidth]{t_f.png}
+    \caption{Vstupní a výstupní průběhy napětí z osciloskopu - vyznačen časový posun $t_{f}$}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{t_dr.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \includegraphics[width=0.7\textwidth]{t_dr.png}
+    \caption{Vstupní a výstupní průběhy napětí z osciloskopu - vyznačen časový posun $t_{dr}$}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{t_r.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \includegraphics[width=0.7\textwidth]{t_r.png}
+    \caption{Vstupní a výstupní průběhy napětí z osciloskopu - vyznačen časový posun $t_{r}$}
 \end{figure}
 
 \begin{table}[H]
@@ -186,23 +210,56 @@ Při nulovém rozdílu dojde na straně kolektoru (D) k uzavření kanálu a k s
         9,5 & 14,5 & 21 & 74 \\
         \bottomrule
     \end{tabular}
-    \caption{aldeskgfajkd}
+    \caption{Naměřené hodnoty časových posunů tranzistoru BS170 zapojeného jako spínač}
 \end{table}
 
+\pagebreak
+
 \section{Grafy}
+
+Jednotlivé výstupní charakteristiky byly vyneseny do společného grafu jako závislost proudu tekoucího kanálem $I_D$ na kanálovém napětí $U_{DS}$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{vystupni.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \caption{Naměřené výstupní charakteristiky tranzisotru BS170 vyneseny do společného grafu}
 \end{figure}
+
+\pagebreak
+
+Naměřené převodní charakteristiky byly vyneseny do společného grafu jako závislost proudu protékajícího kanálem $I_D$ na hradlovém napětí $U_{GS}$.
 
 \begin{figure}[H]
     \centering
     \includegraphics{prevodni.png}
-    \caption{Průběhy napětí při spínání tranzistoru NMOS}
+    \caption{Naměřené převodní charakteristiky tranzisotru BS170 vyneseny do společného grafu}
 \end{figure}
 
 \section{Závěr}
+
+Jako první jsme měřili výstupní charkateristiky tranzistoru BS170 při různých hodnotách $U_{GS} = konst.$
+Napětí $U_{DS}$ jsme pro jednotlivé charakteriky nastavovali na různé hodnoty jen dokud $U_{CC} = 25V$.
+Naměřené hodnoty všech charakteristik byly poté vyneseny do společného grafu.
+Výsledek měření však odpovídal očekáváním jen částečně.
+První charakteristika při $U_{GS} = 0V$ má lineární charakter, to však v grafu při zvoleném měřítku není vidět.
+Druhá charakteristika při $U_{GS} = 2V$ má očekávaný tvar, ale opět se v grafu jeví jako horizontální přímka kvůli zvolenému měŕítku.
+Následující charakteristiky jsou "ořezané"\ zprava.
+To proto, že jsme počas měření dosáhli na maximální zadané napětí $U_{CC} = 25V$ poměrně brzy.
+V poslední měřené charaktersitice z tohoto důvodu není vidět ani její ohyb.
+V charakteristikách při $U_{GS} = 2,5V$, $2,8V$ a $3V$ je také patrný exponenciální růst proudu $I_D$ tam, kde by jsme očekávali pouze nepatrný růst.
+Tento jev je způsoben teplotní závislostí elektronických součástek použitých pro měření.
+Během měření jsme také pozorovali velké zahřívání použitých součástek při dotyku rukou.
+
+Ve druhém měření jsme měřili převodní charakteristiky tranzisoru BS170 při $U_{DS} = konst.$
+Měření jsme prováděli jen do maximální hodnoty $U_{GS}$, kdy ještě šlo udržet zadané konstantní napětí $U_{DS}$.
+Naměřené hodnoty byly opět vyneseny do společného grafu.
+Naměřené charakteristiky jeví tvar exponenciálního charakteru, i když naše očekávání bylo více lineární.
+Tato neshoda je opět způsobena teplotními závislostmi zvolených součástek a opět jsme během měření pozorovali velké zahřívání součástek při dotyku prstem.
+
+V posledním měření jsme se věnovali obvodu s tranzistorem BS170 zapojeným jako spínač.
+Podstatou tohoto měření bylo prozkoumat jednotlivé časové posuny mezi vstupním a výstupním napěťovým průběhem obvodu a taktéž doby trvání jednotlivých hran výstupního průběhu.
+Významným pozorovaným jevem bylo, že náběžná i sestupní hrana výstupního průběhu byla za vstupním průběhem opožděna o několik nanosekund.
+Dále jsme měřili délky jednotlivých hran výstupního signálu. Přičemž bylo patrné, že sestupná hrana trvá relativně krátce, avšak náběžná hrana má délku několik desítek nanosekund a její tvar připomíná nabíjení kondenzátoru.
+
 
 \end{document}
